@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* // <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 200 to 900 */
+
+* {
+    font-family: "Source Sans 3", sans-serif;
+    padding: 0;
+    margin: 0;
+    /* font-weight: <weight>; */
+    /* font-style: normal; */
+}
+
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    border: 2px solid #e2e2e2;
+    height: 100vh;
+    overflow: auto;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #e2e2e2;
+}
+
+.logo {
+    width: 124px;
+}
+
+.user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post {
+    border-bottom: 3px solid #e2e2e2;
+}
+
+.post-user {
+    padding: 12px;
+    display: flow-root;
+}
+
+.post-user .user-profile {
+    float: left;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: 700;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.actions {
+    margin-top: 12px;
+    height: 32px;
+}
+
+.actions-icon {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+}
+
+.like-comments {
+    padding: 10px;
+}
+
+.likes {
+    font-weight: 700;
+}
+
+.comment-user {
+    font-weight: 700;
+}
