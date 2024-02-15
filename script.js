@@ -44,8 +44,13 @@ posts.forEach((post) => {
 
                 <div class="post-user">
                     <img src="${post.avatar}" class="user-profile">
-                    <p class="username">${post.username}</p>
-                    <p class="location">${post.location}</p>
+                    <div>
+                        <p class="username">${post.username}</p>
+                        <p>${post.location}</p>
+                    </div>
+                    <button class="post-options btn">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
                 </div>
 
                 <div class="post-img">
@@ -54,9 +59,15 @@ posts.forEach((post) => {
 
                 <div class="post-info">
                     <div class="actions">
-                        <img src="images/icon-heart.png" class="actions-icon">
-                        <img src="images/icon-comment.png" class="actions-icon">
-                        <img src="images/icon-dm.png" class="actions-icon">
+                        <button class="btn new-post">
+                            <i class="bi bi-heart"></i>           
+                        </button>
+                        <button class="btn new-post">
+                            <i class="bi bi-chat"></i>
+                        </button>
+                        <button class="btn new-post">
+                            <i class="bi bi-send"></i> 
+                        </button>
                     </div>
 
                     <div class="like-comments">

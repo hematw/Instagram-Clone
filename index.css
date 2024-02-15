@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+:root {
+    --dark-color: #181717;
+    --light-color: #fbf9f9;
+}
+
 * {
     font-family: "Source Sans 3", sans-serif;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 
 .container {
     max-width: 375px;
     margin: 0 auto;
-    border: 2px solid #e2e2e2;
+    border: 2px solid var(--dark-color);
     height: 100vh;
     overflow: auto;
+    position: relative;
 }
 
 .container::-webkit-scrollbar {
@@ -19,16 +28,68 @@
 }
 
 .container header {
-    padding: 5px 10px;
+    padding: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #e2e2e2;
+    border-bottom: 3px solid var(--dark-color);
 }
 
 .logo {
     width: 124px;
 }
+
+.btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header-btns .btn {
+    font-size: 24px;
+    margin: 8px;
+}
+
+.stories {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    border-bottom: 2px solid var(--dark-color);
+    overflow: auto;
+}
+
+.stories::-webkit-scrollbar {
+    display:none;
+}
+
+.story-container {
+    min-width: 80px;
+    width: 86px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: solid 4px transparent;
+    background-image: linear-gradient(45deg, #f2ff00, #fd911d, #e1306c, #c13584);
+    background-origin: border-box;
+}
+
+.add-story {
+    background-image: none;
+}
+
+.post {
+    border-bottom: 3px solid var(--dark-color);
+}
+
 
 .user-profile {
     width: 50px;
@@ -36,27 +97,20 @@
     border-radius: 50%;
 }
 
-.post {
-    border-bottom: 3px solid #e2e2e2;
-}
-
 .post-user {
     padding: 12px;
-    display: flow-root;
-}
-
-.post-user .user-profile {
-    float: left;
-    margin-right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .username {
     font-weight: 700;
-    margin-top: 5px;
 }
 
-.location {
-    margin-bottom: 5px;
+.post-options {
+    font-size: 18px;
+    margin: auto 0 auto auto;
 }
 
 .post-img {
@@ -68,8 +122,8 @@
     height: 32px;
 }
 
-.actions-icon {
-    width: 24px;
+.actions .btn {
+    font-size: 24px;
     height: 24px;
     margin: 8px;
 }
@@ -84,4 +138,27 @@
 
 .comment-user {
     font-weight: 700;
+}
+
+.nav-container {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    font-size: 24px;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
 }
