@@ -31,11 +31,29 @@ const posts = [
         comment: "🧡🧡🧡",
         likes: "113"
     }
+];
+
+const stories = [
+    {
+        username: "jamshid_ha",
+        avatar: "images/jamshid.jpg",
+    },
+    {
+        username: "karim.bak",
+        avatar: "images/karim.jpeg",
+    },
+    {
+        username: "sahilgaba",
+        avatar: "images/sahil.jpeg"
+    },
+    {
+        username: "hematw",
+        avatar: "images/profile.jpg"
+    }
 ]
 
 
 const postsSection = document.getElementById("posts-section");
-console.log(postsSection);
 
 let allPosts = "";
 posts.forEach((post) => {
@@ -81,3 +99,18 @@ posts.forEach((post) => {
 })
 
 postsSection.innerHTML = allPosts;
+
+// Stories part
+const storiesContainer = document.getElementById("stories")
+
+let allStories = "";
+stories.forEach((story)=> {
+    allStories += `
+    <div class="story-container">
+        <img src="${story.avatar}" class="story-img">
+        <p class="story-user">${story.username}</p>
+    </div>
+    `
+})
+
+storiesContainer.innerHTML += allStories
